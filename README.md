@@ -12,7 +12,7 @@ This example also shows how to separate the data loading from the query, which i
 
 2\. Python 3.12 or above
 
-3\. Install the following python packages using the pip command:
+3\. Install the following python packages using the `pip install` command:
 ```
 llama-index
 llama-index.embeddings.huggingface
@@ -38,7 +38,7 @@ with engine.connect() as conn:
 
 ## Running
 
-1\. In the root directory of application, run the following command to load the data: `python load\_data.py`
+1\. In the root directory of application, run the following command to load the data: `python load_data.py`
 
 It will read the files from the data\_example directory, make the embeddings and write them to IRIS:
 ```
@@ -47,7 +47,7 @@ Document ID: eb2eb006-9a33-4c41-ae4a-d7f2b8eff03f
 Parsing nodes: 100%|█████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 32.91it/s]
 Generating embeddings: 100%|███████████████████████████████████████████████████████████| 21/21 [01:05<00:00,  3.14s/it]
 ```
-2\. After that you can run the following command to ask a question: `python query\_data.py`
+2\. After that you can run the following command to ask a question: `python query_data.py`
 
 Example:
 ```
