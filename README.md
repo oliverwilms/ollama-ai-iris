@@ -13,10 +13,12 @@ This example also shows how to separate the data loading from the query, which i
 2\. Python 3.12 or above
 
 3\. Install the following python packages using the pip command:
+```
 llama-index
 llama-index.embeddings.huggingface
 llama-index.llms.ollama
 sqlalchemy-iris
+```
 
 4\. Intersystems IRIS 2024.1 or above
 
