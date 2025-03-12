@@ -60,5 +60,5 @@ Edit this line of query_data.py to ask other questions: `response = query\_engin
 
 ## Credits
 
-Thanks to llama-iris library by @Dmitry Maslennikov and to iris-vector-search by @Alvin Ryanputra 
+Thanks to [llama-iris](https://openexchange.intersystems.com/package/llama-iris) library by @Dmitry Maslennikov and to [iris-vector-search](https://openexchange.intersystems.com/package/iris-vector-search) by @Alvin Ryanputra 
 
