@@ -1,15 +1,13 @@
 
-from llama_index.core import StorageContext
+from llama_index.core import StorageContext,Settings,load_index_from_storage
 from llama_iris import IRISVectorStore
-from llama_index.core import Settings
 from llama_index.llms.ollama import Ollama
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
-from llama_index.core import load_index_from_storage
 
-
-
+# iris connection url: "iris://username:password@server:port/namespace"
 url = f"iris://teste:teste@localhost:51774/TESTE"
 
+# These 2 lines are used to exchange OpenAI for Ollama.
 Settings.embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-m3")
 Settings.llm = Ollama(model="llama3.2", request_timeout=360.0)
 
@@ -29,7 +27,7 @@ index = load_index_from_storage(
 )
 query_engine = index.as_query_engine()
     
-response = query_engine.query("Faça um resumo da história de Anakin")
+response = query_engine.query("What did the author do?")
 
 import textwrap
 print(textwrap.fill(str(response), 100))
