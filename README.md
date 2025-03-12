@@ -40,9 +40,9 @@ with engine.connect() as conn:
 
 1\. In the root directory of application, run the following command to load the data: `python load_data.py`
 
-It will read the files from the data\_example directory, make the embeddings and write them to IRIS:
+It will read the files from the data_example directory, make the embeddings and write them to IRIS:
 ```
-python load\_data.py
+python load_data.py
 Document ID: eb2eb006-9a33-4c41-ae4a-d7f2b8eff03f
 Parsing nodes: 100%|█████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 32.91it/s]
 Generating embeddings: 100%|███████████████████████████████████████████████████████████| 21/21 [01:05<00:00,  3.14s/it]
@@ -51,12 +51,12 @@ Generating embeddings: 100%|█████████████████�
 
 Example:
 ```
-python query\_data.py
+python query_data.py
 The author worked on various projects and endeavors, including building a new dialect of Lisp called
 Arc, publishing essays online, and developing spam filters.
 ```
 
-Edit this line of query\_data.py to ask other questions: `response = query\_engine.query("What did the author do?")`
+Edit this line of query_data.py to ask other questions: `response = query\_engine.query("What did the author do?")`
 
 ## Credits
 
