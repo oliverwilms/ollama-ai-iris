@@ -8,7 +8,7 @@ This example also shows how to separate the data loading from the query, which i
 
 ## Requirements
 
-1\. Ollama installed and running on your computer (you can download it from https://ollama.com/download). You can test if it's ok running the following command on prompt: *ollama run llama3.2 "Explain the basics of machine learning."*
+1\. Ollama installed and running on your computer (you can download it from https://ollama.com/download). You can test if it's ok running the following command on prompt: `ollama run llama3.2 "Explain the basics of machine learning."`
 
 2\. Python 3.12 or above
 
