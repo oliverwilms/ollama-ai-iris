@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine, text
 
-url = f"iris://_SYSTEM:SYS@localhost:32784/IRISAPP"
+url = f"iris://_SYSTEM:SYS@localhost:32784/USER"
 engine = create_engine(url)
 with engine.connect() as conn:
     print(conn.execute(text("SELECT 'hello world!'")).first()[0])
