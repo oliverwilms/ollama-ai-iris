@@ -5,7 +5,7 @@ from llama_index.llms.ollama import Ollama
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 
 # iris connection url: "iris://username:password@server:port/namespace"
-url = f"iris://teste:teste@localhost:51774/TESTE"
+url = f"iris://_SYSTEM:SYS@localhost:1972/IRISAPP"
 
 # These 2 lines are used to exchange OpenAI for Ollama.
 Settings.embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-m3")
