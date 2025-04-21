@@ -17,6 +17,13 @@ vector_store = IRISVectorStore.from_params(
     embed_dim = 1024 # HugginFace BAAI/bge-m3 dimensionality
 )
 
+def read_prompt(prompt_path: str):
+    """
+    Read the prompt for medical progress note parsing from a text file.
+    """
+    with open(prompt_path, "r") as f:
+        return f.read()
+
 #load the storage context saved in load_data.py
 storage_context = StorageContext.from_defaults(vector_store=vector_store,persist_dir="storageExample")
 index = load_index_from_storage(
