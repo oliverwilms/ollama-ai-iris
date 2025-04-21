@@ -6,7 +6,7 @@ from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.llms.ollama import Ollama
 
 # iris connection url: "iris://username:password@server:port/namespace"
-url = f"iris://teste:teste@localhost:51774/TESTE"
+url = f"iris://_SYSTEM:SYS@localhost:1972/IRISAPP"
 
 # data_example is the name of directory where the documents are
 documents = SimpleDirectoryReader("data_example").load_data()
