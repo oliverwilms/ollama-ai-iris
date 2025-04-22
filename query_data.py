@@ -4,6 +4,8 @@ from llama_iris import IRISVectorStore
 from llama_index.llms.ollama import Ollama
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 
+prompt_path = "./data/prompts/medical_progress_notes_prompt.txt"
+
 # iris connection url: "iris://username:password@server:port/namespace"
 url = f"iris://_SYSTEM:SYS@localhost:1972/IRISAPP"
 
@@ -33,8 +35,8 @@ index = load_index_from_storage(
     # embed_model=Settings.embed_model,
 )
 query_engine = index.as_query_engine()
-    
-response = query_engine.query("What did the author do?")
+prompt_data = read_prompt(prompt_path)
+response = query_engine.query(prompt_data)
 
 import textwrap
 print(textwrap.fill(str(response), 100))
