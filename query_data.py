@@ -12,6 +12,11 @@ url = f"iris://_SYSTEM:SYS@localhost:1972/IRISAPP"
 # These 2 lines are used to exchange OpenAI for Ollama.
 Settings.embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-m3")
 Settings.llm = Ollama(model="llama3.2", request_timeout=360.0)
+Settings.llm = Ollama(
+    base_url="http://ollama:11434", # tell it to connect to the Ollama container
+    model="llama3.2",
+    request_timeout=360.0
+)
 
 vector_store = IRISVectorStore.from_params(
     connection_string=url,
