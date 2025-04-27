@@ -20,7 +20,7 @@ services:
   ollama:
     image: ollama/ollama:latest
     environment:
-      - MODEL=orca-mini
+      - MODEL=llama3.2
     volumes:
       - ./ollama/:/root/.ollama
     ports:
