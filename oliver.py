@@ -2,6 +2,9 @@ from llama_index.core import StorageContext,Settings,load_index_from_storage
 from llama_iris import IRISVectorStore
 from llama_index.llms.ollama import Ollama
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
+
+prompt_path = "./data/prompts/oliver.txt"
+
 # iris connection url: "iris://username:password@server:port/namespace"
 url = f"iris://_SYSTEM:SYS@localhost:1972/IRISAPP"
 # These 2 lines are used to exchange OpenAI for Ollama.
@@ -18,6 +21,13 @@ vector_store = IRISVectorStore.from_params(
     embed_dim = 1024 # HugginFace BAAI/bge-m3 dimensionality
 )
 
+def read_prompt(prompt_path: str):
+    """
+    Read the prompt for medical progress note parsing from a text file.
+    """
+    with open(prompt_path, "r") as f:
+        return f.read()
+
 #load the storage context saved in load_data.py
 storage_context = StorageContext.from_defaults(vector_store=vector_store,persist_dir="storageExample")
 index = load_index_from_storage(
@@ -28,7 +38,7 @@ index = load_index_from_storage(
 )
 
 query_engine = index.as_query_engine()
-prompt_data = "What should I do to become a NLP Engineer? Give a short, concise answer"
+prompt_data = read_prompt(prompt_path)
 response = query_engine.query(prompt_data)
 
 import textwrap
