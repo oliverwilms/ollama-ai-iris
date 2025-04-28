@@ -39,6 +39,7 @@ index = load_index_from_storage(
 
 query_engine = index.as_query_engine()
 prompt_data = read_prompt(prompt_path)
+prompt_data = input("Enter prompt: ")
 response = query_engine.query(prompt_data)
 
 import textwrap
