@@ -26,3 +26,17 @@ services:
     ports:
       - 11435:11434
     entrypoint: ["sh", "/root/.ollama/entrypoint.sh"]
+  jupyter:
+    build:
+      context: .
+      dockerfile: jupyter/Dockerfile
+    container_name: jupyter
+    ports: 
+      - "8888:8888"
+    environment: 
+      - JUPYTER_ENABLE_LAB=yes
+      - JUPYTER_ALLOW_INSECURE_WRITES=true
+    volumes: 
+      - ./jupyter:/home/jovyan
+      - ./data:/app/data
+    command: "start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''"
