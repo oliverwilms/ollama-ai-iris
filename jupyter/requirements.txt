@@ -1,0 +1,11 @@
+pypdf
+sentence-transformers
+ipywidgets
+langchain-text-splitters
+langchain-community
+mistral_common
+langchain_mistralai
+langchain-openai
+langchain_iris
+transformers
+torch
