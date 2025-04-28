@@ -9,3 +9,6 @@ langchain-openai
 langchain_iris
 transformers
 torch
+llama-index
+llama-index.embeddings.huggingface
+llama-index.llms.ollama
