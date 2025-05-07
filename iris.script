@@ -1,0 +1,8 @@
+
+    // unexpire default passwords
+    set $namespace = "%SYS"
+    do ##class(Security.Users).UnExpireUserPasswords("*")
+    
+    // import source code & schemas
+    set $namespace="IRISAPP"
+    do $SYSTEM.OBJ.Load("/opt/irisapp/src/Oliver/NewProduction.cls", "ck")
