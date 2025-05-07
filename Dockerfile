@@ -17,3 +17,8 @@ COPY . .
 
 RUN pip3 install -r requirements.txt && \
     echo 'from langchain.embeddings import FastEmbedEmbeddings; FastEmbedEmbeddings()' | python3
+
+# run iris.script
+RUN iris start IRIS \
+    && iris session IRIS < /irisdev/app/iris.script \
+    && iris stop IRIS quietly
