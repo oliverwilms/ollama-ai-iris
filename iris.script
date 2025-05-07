@@ -5,4 +5,4 @@
     
     // import source code & schemas
     set $namespace="IRISAPP"
-    do $SYSTEM.OBJ.Load("/opt/irisapp/src/Oliver/NewProduction.cls", "ck")
+    do $SYSTEM.OBJ.Load("/irisdev/app/src/Oliver/NewProduction.cls", "ck")
