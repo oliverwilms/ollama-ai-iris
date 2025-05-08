@@ -16,11 +16,15 @@ XData Install [ XMLNamespace = INSTALLER ]
             <GlobalMapping Global="excel" From="USER"/>
         </Configuration>
         <Log Text="Enable interoperability to ${NAMESPACE}..." Level="0"/>
-	    <Invoke Class="%Library.EnsembleMgr" Method="EnableNamespace" CheckStatus="true">
+	<Invoke Class="%Library.EnsembleMgr" Method="EnableNamespace" CheckStatus="true">
             <Arg name="pTargetNS" Value="${NAMESPACE}"/>
             <Arg name="pVerbose" Value="1"/>
-	    </Invoke>
+	</Invoke>
     </Namespace>
+    <If Condition='(##class(Security.Applications).Exists("/restapi")=0)'>
+        <Log Text="Creating web application /api/test" Level="0"/>
+        <RunInstall Class="Install.Installer" Method="CreateWebAppREST"/>
+    </If>
 </Manifest>
 }
 
