@@ -3,6 +3,10 @@
     set $namespace = "%SYS"
     do ##class(Security.Users).UnExpireUserPasswords("*")
     
+    // create namespace
+    do $SYSTEM.OBJ.Load("/irisdev/app/src/Install/Installer.cls", "ck")
+    do ##class(Install.Installer).Install()
+    
     // import source code & schemas
-    set $namespace="IRISAPP"
+    set $namespace = "IRISAPP"
     do $SYSTEM.OBJ.Load("/irisdev/app/src/Oliver/NewProduction.cls", "ck")
