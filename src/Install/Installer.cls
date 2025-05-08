@@ -69,7 +69,7 @@ ClassMethod CreateWebAppREST(pVars, pLogLevel, tInstaller) As %Status
   //  Set cspProperties("AutheEnabled") = $$$AutheCache // Password
   //}
   Set cspName = "/api/test"
-  Set cspProperties("NameSpace") = $Get(Namespace,"IRISAPP")
+  Set cspProperties("NameSpace") = ..#NAMESPACE
   Set cspProperties("Enabled") = 1
   Set cspProperties("DeepSeeEnabled") = 1
   Set cspProperties("iKnowEnabled") = 0
