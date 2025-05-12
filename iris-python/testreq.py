@@ -23,7 +23,7 @@ def send_chat(prompt_path: str):
     data2 = data1.replace("$prompt",prompt_data)
     print(data2)
     s = Session()
-    url = "http://localhost:11434/api/chat"
+    url = "http://ollama:11434/api/chat"
     req = Request('POST', url, data=data2,)
     #prepped = req.prepare()
     prepped = s.prepare_request(req)
