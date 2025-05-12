@@ -6,7 +6,7 @@ ClassMethod SendChat(pPath As %String) As %String
   Set resp = ""
   Try {
     Set testreq = ##class(%SYS.Python).Import("testreq")
-    Set resp = testreq.send_chat(pPath)
+    Set resp = testreq."send_chat"(pPath)
   }
   Catch exp {
     IF 1=exp.%IsA("%Exception.SystemException") {
