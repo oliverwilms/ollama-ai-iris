@@ -15,7 +15,7 @@ def read_file(file_path: str):
 def send_chat(prompt_path: str):
     prompt_data = read_file(prompt_path)
     print({prompt_data})
-    question_path = "/home/ec2-user/metadata/data/prompts/medical_progress_notes_prompt.txt"
+    question_path = "/irisdev/app/data/prompts/medical_progress_notes_prompt.txt"
     question_data = read_file(question_path)
     print(question_data)
     data = '{"model": "llama3.2", "messages": [{"role": "system", "content": "$question"}, {"role": "user", "content": "$prompt"}]}'
