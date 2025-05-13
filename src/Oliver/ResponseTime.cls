@@ -1,3 +1,4 @@
+/// select ID, Filename, RequestTimestamp, ResponseTimestamp, ResponseZCalc, URL, yResponse from Oliver.ResponseTime
 Class Oliver.ResponseTime Extends %Persistent
 {
 
@@ -54,6 +55,8 @@ Property xDynatraceRequestState As %String(MAXLEN = 1255);
 
 Property xWebgateway As %String(MAXLEN = 1255);
 
+Property yResponse As %String(MAXLEN = "");
+
 ClassMethod NewRequest(pRequest As %Net.HttpRequest, pURL As %String, pAdapterServer As %String, pAdapterPort As %String, pUnitTest As %String, pFilename As %String) As Oliver.ResponseTime
 {
 	//Set tPort = $Select($Get(pAdapterPort)'="":pAdapterPort,1:pRequest.Port)
@@ -85,6 +88,8 @@ Method SaveResponse(pResponse As %Net.HttpResponse, pSendSC As %Status = "") As 
 		Set ..xDynatraceApplication = pResponse.GetHeader("X-DYNATRACE-APPLICATION")
 		Set ..xDynatraceRequestState = pResponse.GetHeader("X-DYNATRACE-REQUESTSTATE")
 		Set ..xWebgateway = pResponse.GetHeader("X-RUXIT-APACHE-SERVERNAMEPORTS")
+	} Else {
+		Set ..yResponse = $Get(pResponse)
 	}
 	Try {
 		Set tSendSC = $SYSTEM.Status.GetOneStatusText(pSendSC)
