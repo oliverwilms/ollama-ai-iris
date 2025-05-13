@@ -16,7 +16,8 @@ ClassMethod SendChat(pPath As %String) As %String
   Try {
     Set testreq = ##class(%SYS.Python).Import("testreq")
     Set resp = testreq."send_chat"(pPath)
-    Set tSC = oResponseTime.SaveResponse(pResponse, pSendSC)
+    Set tSC = oResponseTime.SaveResponse(resp, pSendSC)
+    zw resp
   }
   Catch exp {
     IF 1=exp.%IsA("%Exception.SystemException") {
