@@ -5,7 +5,7 @@ Property RequestTimestamp As %String;
 
 Property ResponseTimestamp As %String;
 
-Property ResponseZCalc As %Integer [ Calculated, SqlComputeCode = {set {*}=##class(Feeder.Util).GetDateTimeDiff({RequestTimestamp},{ResponseTimestamp})}, SqlComputed ];
+Property ResponseZCalc As %Integer [ Calculated, SqlComputeCode = {set {*}=##class(Oliver.SQL).GetDateTimeDiff({RequestTimestamp},{ResponseTimestamp})}, SqlComputed ];
 
 /// Server to connect to (optional). If not specified, it defaults to 'localhost'.
 Property Server As %String(MAXLEN = 255);
