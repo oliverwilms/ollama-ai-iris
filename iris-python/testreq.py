@@ -51,3 +51,4 @@ def send_chat(prompt_path: str):
             content = message["content"]
             answer.append(content)
     print(str(answer))
+    return str(answer)
