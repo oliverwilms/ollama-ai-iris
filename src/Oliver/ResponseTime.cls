@@ -54,23 +54,19 @@ Property xDynatraceRequestState As %String(MAXLEN = 1255);
 
 Property xWebgateway As %String(MAXLEN = 1255);
 
-ClassMethod NewRequest(pRequest As %Net.HttpRequest, pURL As %String, pAdapterServer As %String, pAdapterPort As %String, pUnitTest As %String, pFilename As %String) As Feeder.ResponseTime
+ClassMethod NewRequest(pRequest As %Net.HttpRequest, pURL As %String, pAdapterServer As %String, pAdapterPort As %String, pUnitTest As %String, pFilename As %String) As Oliver.ResponseTime
 {
 	//Set tPort = $Select($Get(pAdapterPort)'="":pAdapterPort,1:pRequest.Port)
 	Set tPort = $Get(pAdapterPort)
-	Set tServer = $Select($Get(pAdapterServer)'="":pAdapterServer,1:pRequest.Server)
 	Set oResponseTime = ..%New()
 	Set oResponseTime.RequestTimestamp = $ZDateTime($NOW(),3,1,3)
 	If ($Get(pUnitTest) = "") Set pUnitTest = $Get(^myUnitTests)
 	Set oResponseTime.myUnitTest = pUnitTest
-	Set oResponseTime.ContentLength = pRequest.ContentLength
+	Set oResponseTime.ContentLength = ""  // pRequest.ContentLength
 	Set oResponseTime.Filename = $Get(pFilename)
 	Set oResponseTime.Port = tPort
-	Set oResponseTime.Server = ##class(Feeder.Util).TranslateServer(tServer)
 	Set oResponseTime.URL = $Get(pURL)
 	Set oResponseTime.whichTest = $Get(^myUnitTestControl("whichTest"))
-	Set tSC = ##class(Feeder.Test).UpdateTargetPort(pUnitTest,tPort)
-	Set tSC = ##class(Feeder.Test).UpdateTargetServer(pUnitTest,tServer)
 	Quit oResponseTime
 }
 
@@ -107,6 +103,5 @@ Method SaveStatus(pStatus As %Status) As %Status
 	Set tSC = ..%Save()
 	Quit tSC
 }
-
 
 }
