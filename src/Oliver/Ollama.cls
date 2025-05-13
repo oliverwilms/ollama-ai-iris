@@ -3,10 +3,20 @@ Class Oliver.Ollama Extends %RegisteredObject
 
 ClassMethod SendChat(pPath As %String) As %String
 {
+  #Dim pRequest As %Net.HttpRequest = ""
+  #Dim pResponse As %Net.HttpResponse = ""
+  #Dim pSendSC As %Status = $$$OK
+  Set pURL = "http://ollama:11434/api/chat"
+  Set pAdapterServer = "ollama"
+  Set pAdapterPort = 11434
+  Set pUnitTest = ""
+  Set pFilename = $Get(pPath)
+  Set oResponseTime = ##class(Oliver.ResponseTime).NewRequest(pRequest, pURL, pAdapterServer, pAdapterPort, pUnitTest, pFilename)
   Set resp = ""
   Try {
     Set testreq = ##class(%SYS.Python).Import("testreq")
     Set resp = testreq."send_chat"(pPath)
+    Set tSC = oResponseTime.SaveResponse(pResponse, pSendSC)
   }
   Catch exp {
     IF 1=exp.%IsA("%Exception.SystemException") {
