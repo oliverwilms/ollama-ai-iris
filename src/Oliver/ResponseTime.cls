@@ -1,4 +1,4 @@
-/// select ID, Filename, RequestTimestamp, ResponseTimestamp, ResponseZCalc, URL, yResponse from Oliver.ResponseTime
+/// select ID, Filename, RequestTimestamp, ResponseTimestamp, ResponseZCalc, URL, zTitle, zDate, zPatient, zProvider, zCC, zAssessment, yResponse from Oliver.ResponseTime
 Class Oliver.ResponseTime Extends %Persistent
 {
 
