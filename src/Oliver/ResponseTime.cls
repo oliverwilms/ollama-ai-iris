@@ -1,3 +1,4 @@
+/// select ID, Filename, RequestTimestamp, ResponseTimestamp, ResponseZCalc, URL, yResponse from Oliver.ResponseTime
 Class Oliver.ResponseTime Extends %Persistent
 {
 
@@ -120,10 +121,10 @@ Method SaveStatus(pStatus As %Status) As %Status
 	Quit tSC
 }
 
-ClassMethod test() As %Status
+Method zSaveResponse(resp As %String = "") As %Status
 {
-    Set oResponseTime = ..%OpenId(4)
-    Set resp = oResponseTime.yResponse
+    Set ..ResponseTimestamp = $ZDateTime($NOW(),3,1,3)
+    Set ..yResponse = $Get(resp)
     If ($Extract(resp,1,1) = "[") Set resp = $Extract(resp,2,*)
     If ($Extract(resp,*,*) = "]") Set resp = $Extract(resp,1,*-1)
     Set myAssessment = ""
@@ -173,13 +174,12 @@ ClassMethod test() As %Status
         If (tFlag = tFlagProvider) { Set myProvider = myProvider_..UnpackToken(token) }
         If (tFlag = tFlagTitle) { Set myTitle = myTitle_..UnpackToken(token) }
     }
-    zw myAssessment
-    zw myCC
-    zw myDate
-    zw myPatient
-    zw myProvider
-    zw myTitle
-    //zw token
+    Set ..zAssessment = myAssessment
+    Set ..zCC = myCC
+    Set ..zDate = myDate
+    Set ..zPatient = myPatient
+    Set ..zProvider = myProvider
+    Set ..zTitle = myTitle
     Quit $$$OK
 }
 
