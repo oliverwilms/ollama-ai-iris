@@ -115,23 +115,34 @@ ClassMethod test() As %Status
     If ($Extract(resp,1,1) = "[") Set resp = $Extract(resp,2,*)
     If ($Extract(resp,*,*) = "]") Set resp = $Extract(resp,1,*-1)
     Set myAssessment = ""
+    Set myCC = ""
     Set myDate = ""
+    Set myPatient = ""
+    Set myProvider = ""
     Set myTitle = ""
     Set sep = ", "
     Set tFlag = 0
     Set tFlagAssessment = 1
-    Set tFlagDate = 2
-    Set tFlagTitle = 4
+    Set tFlagCC = 3
+    Set tFlagDate = 4
+    Set tFlagPatient = 5
+    Set tFlagProvider = 6
+    Set tFlagTitle = 8
     Set tokenDate = "'Date'"
+    Set tokenPatient = "'Patient'"
+    Set tokenProvider = "'Provider'"
     Set tokenTitle = "'Title'"
     Set len = $Length(resp,sep)
     For ii = 1:1:len {
         Set token = $Piece(resp,sep,ii)
         If (token = "") { Continue }
-        Set token(token,ii) = token
+        //Set token(token,ii) = token
         Set token(ii) = token
         If (token = "'essment'"),(token(ii-1) = "'Ass'"),(myAssessment = "") { Set tFlag = tFlagAssessment Continue }
+        If (token = "' Complaint'"),(token(ii-1) = "'Chief'"),(myCC = "") { Set tFlag = tFlagCC Continue }
         If (token = tokenDate),(myDate = "") { Set tFlag = tFlagDate Continue }
+        If (token = tokenPatient),(myPatient = "") { Set tFlag = tFlagPatient Continue }
+        If (token = tokenProvider),(myProvider = "") { Set tFlag = tFlagProvider Continue }
         If (token = tokenTitle),(myTitle = "") { Set tFlag = tFlagTitle Continue }
         If (token = "'"":'") { Continue }
         If (token = "' ""'") { Continue }
@@ -141,12 +152,20 @@ ClassMethod test() As %Status
         If ($Extract(token,1,2) = "'""") { Set tFlag = 0 }
         If ($Extract(token,1,3) = "' """) { Set tFlag = 0 }
         If ($Extract(token,1,3) = "'.""") { Set tFlag = 0 }
+        If (tFlag = 0) { Continue }
+        If ($Extract(token,1,1) = """") { Set tFlag = 0 }
         If (tFlag = tFlagAssessment) { Set myAssessment = myAssessment_..UnpackToken(token) }
+        If (tFlag = tFlagCC) { Set myCC = myCC_..UnpackToken(token) }
         If (tFlag = tFlagDate) { Set myDate = myDate_..UnpackToken(token) }
+        If (tFlag = tFlagPatient) { Set myPatient = myPatient_..UnpackToken(token) }
+        If (tFlag = tFlagProvider) { Set myProvider = myProvider_..UnpackToken(token) }
         If (tFlag = tFlagTitle) { Set myTitle = myTitle_..UnpackToken(token) }
     }
     zw myAssessment
+    zw myCC
     zw myDate
+    zw myPatient
+    zw myProvider
     zw myTitle
     //zw token
     Quit $$$OK
