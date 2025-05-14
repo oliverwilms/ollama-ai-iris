@@ -1,4 +1,3 @@
-/// select ID, Filename, RequestTimestamp, ResponseTimestamp, ResponseZCalc, URL, yResponse from Oliver.ResponseTime
 Class Oliver.ResponseTime Extends %Persistent
 {
 
@@ -107,6 +106,57 @@ Method SaveStatus(pStatus As %Status) As %Status
 	Set ..Status = pStatus
 	Set tSC = ..%Save()
 	Quit tSC
+}
+
+ClassMethod test() As %Status
+{
+    Set oResponseTime = ..%OpenId(4)
+    Set resp = oResponseTime.yResponse
+    If ($Extract(resp,1,1) = "[") Set resp = $Extract(resp,2,*)
+    If ($Extract(resp,*,*) = "]") Set resp = $Extract(resp,1,*-1)
+    Set myAssessment = ""
+    Set myDate = ""
+    Set myTitle = ""
+    Set sep = ", "
+    Set tFlag = 0
+    Set tFlagAssessment = 1
+    Set tFlagDate = 2
+    Set tFlagTitle = 4
+    Set tokenDate = "'Date'"
+    Set tokenTitle = "'Title'"
+    Set len = $Length(resp,sep)
+    For ii = 1:1:len {
+        Set token = $Piece(resp,sep,ii)
+        If (token = "") { Continue }
+        Set token(token,ii) = token
+        Set token(ii) = token
+        If (token = "'essment'"),(token(ii-1) = "'Ass'"),(myAssessment = "") { Set tFlag = tFlagAssessment Continue }
+        If (token = tokenDate),(myDate = "") { Set tFlag = tFlagDate Continue }
+        If (token = tokenTitle),(myTitle = "") { Set tFlag = tFlagTitle Continue }
+        If (token = "'"":'") { Continue }
+        If (token = "' ""'") { Continue }
+        If (token = "'"",\n'") { Set tFlag = 0 }
+        If (token = "' """",\n'") { Set tFlag = 0 }
+        If (token = "'.""\n'") { Set tFlag = 0 }
+        If ($Extract(token,1,2) = "'""") { Set tFlag = 0 }
+        If ($Extract(token,1,3) = "' """) { Set tFlag = 0 }
+        If ($Extract(token,1,3) = "'.""") { Set tFlag = 0 }
+        If (tFlag = tFlagAssessment) { Set myAssessment = myAssessment_..UnpackToken(token) }
+        If (tFlag = tFlagDate) { Set myDate = myDate_..UnpackToken(token) }
+        If (tFlag = tFlagTitle) { Set myTitle = myTitle_..UnpackToken(token) }
+    }
+    zw myAssessment
+    zw myDate
+    zw myTitle
+    //zw token
+    Quit $$$OK
+}
+
+ClassMethod UnpackToken(pToken As %String = "") As %String
+{
+    If ($Extract(pToken,1,1) = "'") Set pToken = $Extract(pToken,2,*)
+    If ($Extract(pToken,*,*) = "'") Set pToken = $Extract(pToken,1,*-1)
+    Quit pToken
 }
 
 }
