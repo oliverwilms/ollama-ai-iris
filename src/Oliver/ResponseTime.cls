@@ -56,6 +56,18 @@ Property xWebgateway As %String(MAXLEN = 1255);
 
 Property yResponse As %String(MAXLEN = "");
 
+Property zAssessment As %String(MAXLEN = "");
+
+Property zCC As %String(MAXLEN = "");
+
+Property zDate As %String(MAXLEN = "");
+
+Property zPatient As %String(MAXLEN = "");
+
+Property zProvider As %String(MAXLEN = "");
+
+Property zTitle As %String(MAXLEN = "");
+
 ClassMethod NewRequest(pRequest As %Net.HttpRequest, pURL As %String, pAdapterServer As %String, pAdapterPort As %String, pUnitTest As %String, pFilename As %String) As Oliver.ResponseTime
 {
 	//Set tPort = $Select($Get(pAdapterPort)'="":pAdapterPort,1:pRequest.Port)
