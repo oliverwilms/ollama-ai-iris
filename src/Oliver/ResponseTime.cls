@@ -180,7 +180,8 @@ Method zSaveResponse(resp As %String = "") As %Status
     Set ..zPatient = myPatient
     Set ..zProvider = myProvider
     Set ..zTitle = myTitle
-    Quit $$$OK
+    Set tSC = ..%Save()
+    Quit tSC
 }
 
 ClassMethod UnpackToken(pToken As %String = "") As %String
