@@ -14,6 +14,15 @@ XData ProductionDefinition
     <Setting Target="Adapter" Name="HTTPServer">ollama</Setting>
     <Setting Target="Adapter" Name="URL">/api/chat</Setting>
   </Item>
+  <Item Name="EnsLib.File.PassthroughService" Category="" ClassName="EnsLib.File.PassthroughService" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
+    <Setting Target="Host" Name="TargetConfigNames">Oliver.BplPdfExtractText</Setting>
+    <Setting Target="Adapter" Name="FilePath">/irisdev/app/data_example/</Setting>
+    <Setting Target="Adapter" Name="FileSpec">*.pdf</Setting>
+  </Item>
+  <Item Name="EnsLib.File.PassthroughOperation" Category="" ClassName="EnsLib.File.PassthroughOperation" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
+  </Item>
+  <Item Name="Oliver.BplPdfExtractText" Category="" ClassName="Oliver.BplPdfExtractText" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
+  </Item>
 </Production>
 }
 
