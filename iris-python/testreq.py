@@ -1,3 +1,4 @@
+import chardet
 import json
 import re
 from requests import Request, Session
@@ -45,7 +46,9 @@ def send_chat(prompt_path: str):
     for line in resp.iter_lines():
         # filter out keep-alive new lines
         if line:
-            decoded_line = line.decode('utf-8')
+            result = chardet.detect(line)
+            encoding = result['encoding']
+            decoded_line = line.decode(encoding)
             y = (json.loads(decoded_line))
             message = y["message"]
             content = message["content"]
