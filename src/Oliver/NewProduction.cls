@@ -24,6 +24,13 @@ XData ProductionDefinition
   </Item>
   <Item Name="Oliver.BplPdfExtractText" Category="" ClassName="Oliver.BplPdfExtractText" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
   </Item>
+  <Item Name="Text File Service" Category="" ClassName="EnsLib.File.PassthroughService" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
+    <Setting Target="Host" Name="TargetConfigNames">Oliver.BplSendChat</Setting>
+    <Setting Target="Adapter" Name="FilePath">/tmp</Setting>
+    <Setting Target="Adapter" Name="FileSpec">_2025*</Setting>
+  </Item>
+  <Item Name="Oliver.BplSendChat" Category="" ClassName="Oliver.BplSendChat" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
+  </Item>
 </Production>
 }
 
