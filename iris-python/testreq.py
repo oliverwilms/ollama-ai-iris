@@ -12,9 +12,10 @@ def read_file(file_path: str):
     Read some text from a text file.
     """
     logger.debug(file_path)
-    with open(file_path, "r") as f:
+    with open(file_path, "rb") as f:
         file_data = f.read()
-        logger.debug(file_data)
+        encoding = chardet.detect(file_data).get("encoding")
+        file_data = file_data.decode(encoding)
         original_string = file_data.replace("\n", " ")
         modified_string = re.sub(r'"', "'", original_string)
         return modified_string
