@@ -1,7 +1,11 @@
 import chardet
 import json
+import logging
 import re
 from requests import Request, Session
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(filename='testreq.log', encoding='utf-8', level=logging.DEBUG)
 
 def read_file(file_path: str):
     """
@@ -46,6 +50,7 @@ def send_chat(prompt_path: str):
     for line in resp.iter_lines():
         # filter out keep-alive new lines
         if line:
+            logger.debug(line)
             result = chardet.detect(line)
             encoding = result['encoding']
             try:
