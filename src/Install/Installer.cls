@@ -43,7 +43,8 @@ ClassMethod Install() As %Status
     try {
         set args("NAMESPACE") = ..#NAMESPACE
         set args("DBNAME") = $zconvert(..#NAMESPACE,"L")
-        
+        set args("SourceDir") = ..#SourceDir
+
         #; install manifest
         set sc = $$$ADDSC(sc,..Installer(.args))
 
