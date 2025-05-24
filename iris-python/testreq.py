@@ -13,6 +13,7 @@ def read_file(file_path: str):
     """
     with open(file_path, "r") as f:
         file_data = f.read()
+        logger.debug(original_string)
         original_string = file_data.replace("\n", " ")
         modified_string = re.sub(r'"', "'", original_string)
         return modified_string
@@ -27,6 +28,7 @@ def send_chat(prompt_path: str):
     data1 = data.replace("$question",question_data)
     data2 = data1.replace("$prompt",prompt_data)
     print(data2)
+    logger.debug(data2)
     s = Session()
     url = "http://ollama:11434/api/chat"
     req = Request('POST', url, data=data2,)
