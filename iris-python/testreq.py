@@ -48,7 +48,10 @@ def send_chat(prompt_path: str):
         if line:
             result = chardet.detect(line)
             encoding = result['encoding']
-            decoded_line = line.decode(encoding)
+            try:
+                decoded_line = line.decode(encoding)
+            except UnicodeDecodeError:
+                decoded_line = line.decode(encoding, errors="ignore")
             y = (json.loads(decoded_line))
             message = y["message"]
             content = message["content"]
