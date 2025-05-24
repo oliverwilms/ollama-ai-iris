@@ -20,6 +20,7 @@ XData ProductionDefinition
     <Setting Target="Adapter" Name="FileSpec">*.pdf</Setting>
   </Item>
   <Item Name="EnsLib.File.PassthroughOperation" Category="" ClassName="EnsLib.File.PassthroughOperation" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
+    <Setting Target="Adapter" Name="FilePath">/tmp/</Setting>
   </Item>
   <Item Name="Oliver.BplPdfExtractText" Category="" ClassName="Oliver.BplPdfExtractText" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
   </Item>
