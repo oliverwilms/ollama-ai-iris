@@ -2,7 +2,7 @@
 
 In this code we will show how to use Ollama with IRIS.
 
-Ollama is an open source tool that runs large language models (LLMs) directly on a computer. The advantage of Ollama is that it runs locally, which brings more security, and does not depend on a paid subscription, as OpenIA requires.
+
 
 This example also shows how to separate the data loading from the query, which is a more real-world scenario.
 
@@ -61,6 +61,8 @@ Edit this line of query_data.py to ask other questions: `response = query\_engin
 ## Credits
 
 This repo got started when I forked [https://github.com/RodolfoPscheidtJr/ollama-ai-iris](https://github.com/RodolfoPscheidtJr/ollama-ai-iris). I had been trying to implement OpenAI use case, but I really liked that this repo uses ollama deployment in place of calling OpenAI.
+
+Ollama is an open source tool that runs large language models (LLMs) directly on a computer. The advantage of Ollama is that it runs locally, which brings more security, and does not depend on a paid subscription, as OpenAI requires.
 
 Thanks to [llama-iris](https://openexchange.intersystems.com/package/llama-iris) library by @Dmitry Maslennikov and to [iris-vector-search](https://openexchange.intersystems.com/package/iris-vector-search) by @Alvin Ryanputra 
 
