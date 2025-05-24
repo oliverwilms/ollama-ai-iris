@@ -2,7 +2,7 @@
 
 In this code we will show how to use Ollama with IRIS.
 
-
+![screenshot](https://github.com/oliverwilms/bilder/blob/main/visitSummary.JPG)
 
 This example also shows how to separate the data loading from the query, which is a more real-world scenario.
 
