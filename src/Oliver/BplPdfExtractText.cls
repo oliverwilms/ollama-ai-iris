@@ -2,6 +2,11 @@
 Class Oliver.BplPdfExtractText Extends Ens.BusinessProcessBPL
 {
 
+Storage Default
+{
+<Type>%Storage.Persistent</Type>
+}
+
 /// BPL Definition
 XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
 {
@@ -24,6 +29,8 @@ XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
 </code>
 <code name='context.newRequest' xpos='200' ypos='350' >
 <![CDATA[ Set context.newRequest = ##class(Ens.StreamContainer).%New()
+ Set tPdf = request.OriginalFilename
+ Set context.newRequest.OriginalFilename = $Replace(tPdf,".pdf",".txt")
  Set tStream = ##class(%Stream.FileCharacter).%New()
  Set tSC = tStream.Write(context.text)
  Set context.newRequest.Stream = tStream
@@ -32,17 +39,12 @@ XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
 <call name='EnsLib.File.PassthroughOperation' target='EnsLib.File.PassthroughOperation' async='1' xpos='200' ypos='450' >
 <annotation><![CDATA[EnsLib.File.PassthroughOperation]]></annotation>
 <request type='Ens.StreamContainer' >
-<assign property="callrequest" value="context.newRequest" action="set" />
+<assign property="callrequest" value="context.newRequest" action="set" languageOverride="" />
 </request>
 <response type='Ens.Response' />
 </call>
 </sequence>
 </process>
-}
-
-Storage Default
-{
-<Type>%Storage.Persistent</Type>
 }
 
 }
