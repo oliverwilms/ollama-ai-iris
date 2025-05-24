@@ -5,6 +5,7 @@ streamlit
 streamlit-chat
 pypdf
 pytest
+chardet
 chromadb
 fastembed
 llama-index
