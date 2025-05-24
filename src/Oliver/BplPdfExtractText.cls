@@ -19,7 +19,7 @@ XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
 <![CDATA[ Set tPdf = request.OriginalFilename
  Set ^OLIVER($I(^OLIVER),"tPdf") = tPdf
  Set py = ##class(%SYS.Python).Import("pdf_extract_text")
- Set context.text = py.xtract_text(request.OriginalFilename)
+ Set context.text = py."xtract_text"(request.OriginalFilename)
  Set ^OLIVER($I(^OLIVER),"text") = context.text]]>
 </code>
 <code name='context.newRequest' xpos='200' ypos='350' >
