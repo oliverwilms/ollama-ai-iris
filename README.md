@@ -60,5 +60,7 @@ Edit this line of query_data.py to ask other questions: `response = query\_engin
 
 ## Credits
 
+This repo got started when I forked [https://github.com/RodolfoPscheidtJr/ollama-ai-iris](https://github.com/RodolfoPscheidtJr/ollama-ai-iris). I had been trying to implement OpenAI use case, but I really liked that this repo uses ollama deployment in place of calling OpenAI.
+
 Thanks to [llama-iris](https://openexchange.intersystems.com/package/llama-iris) library by @Dmitry Maslennikov and to [iris-vector-search](https://openexchange.intersystems.com/package/iris-vector-search) by @Alvin Ryanputra 
 
