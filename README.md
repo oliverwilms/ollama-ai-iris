@@ -12,7 +12,7 @@ I created an Interoperability Production. First I created a generic REST service
 
 Later I added a File Service to pick up PDF files. I created a BPL to extract text from the PDF files. I sent the text as a StreamContainer to a File Passthrough operation.
 
-Then I created anothr File Service to pick up the text files. I created anbother BPL to call a classmethod to invoke SendChat() to ollama.
+Then I created another File Service to pick up the text files. I created another BPL to call a classmethod to invoke SendChat() to ollama.
 
 
 This example also shows how to separate the data loading from the query, which is a more real-world scenario.
