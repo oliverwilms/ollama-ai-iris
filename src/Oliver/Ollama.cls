@@ -12,6 +12,7 @@ ClassMethod SendChat(pPath As %String) As %String
   Set pUnitTest = ""
   Set pFilename = $Get(pPath)
   Set oResponseTime = ##class(Oliver.ResponseTime).NewRequest(pRequest, pURL, pAdapterServer, pAdapterPort, pUnitTest, pFilename)
+  Set ^OLIVER($I(^OLIVER),"oResponseTime") = oResponseTime
   Set resp = ""
   Try {
     Set testreq = ##class(%SYS.Python).Import("testreq")
@@ -20,6 +21,7 @@ ClassMethod SendChat(pPath As %String) As %String
     zw resp
   }
   Catch exp {
+    Set ^OLIVER($I(^OLIVER),"Catch") = exp
     IF 1=exp.%IsA("%Exception.SystemException") {
       WRITE "System exception",!
       WRITE "Name: ",$ZCVT(exp.Name,"O","HTML"),!
@@ -38,6 +40,9 @@ ClassMethod SendChat(pPath As %String) As %String
       WRITE "General ObjectScript exception",!
       WRITE "Name: ",$ZCVT(exp.Name,"O","HTML"),!
       WRITE "Code: "
+    }
+    ELSEIF 1=exp.%IsA("%Exception.PythonException") {
+      Set ^OLIVER($I(^OLIVER),"PythonException") = exp.AsSystemError()
     }
     ELSE { WRITE "Some other type of exception",! }
     WRITE exp.Code,!
