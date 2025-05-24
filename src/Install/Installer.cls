@@ -12,7 +12,7 @@ XData Install [ XMLNamespace = INSTALLER ]
 <Manifest>
     <Log Text="Creating ${NAMESPACE} namespace and DB..." Level="0"/>
     <Default Name="RESOURCE" Value="%DB_${NAMESPACE}" />
-    <Namespace Name="${NAMESPACE}" Code="${NAMESPACE}" Data="${NAMESPACE}" Create="yes" Ensemble="0">
+    <Namespace Name="${NAMESPACE}" Code="${NAMESPACE}" Data="${NAMESPACE}" Create="yes" Ensemble="1">
         <Configuration>
             <Database Name="${NAMESPACE}" Dir="${MGRDIR}${DBNAME}" Create="yes" MountAtStartup="true"/>
             <GlobalMapping Global="excel" From="USER"/>
