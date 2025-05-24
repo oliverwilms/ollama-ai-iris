@@ -6,7 +6,7 @@ XData ProductionDefinition
 <Production Name="Oliver.NewProduction" LogGeneralTraceEvents="false">
   <Description></Description>
   <ActorPoolSize>2</ActorPoolSize>
-  <Item Name="Service" Category="" ClassName="EnsLib.REST.GenericService" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
+  <Item Name="REST Service" Category="" ClassName="EnsLib.REST.GenericService" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
     <Setting Target="Host" Name="TargetConfigName">ollama</Setting>
   </Item>
   <Item Name="ollama" Category="" ClassName="EnsLib.REST.GenericOperation" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
@@ -14,7 +14,7 @@ XData ProductionDefinition
     <Setting Target="Adapter" Name="HTTPServer">ollama</Setting>
     <Setting Target="Adapter" Name="URL">/api/chat</Setting>
   </Item>
-  <Item Name="EnsLib.File.PassthroughService" Category="" ClassName="EnsLib.File.PassthroughService" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
+  <Item Name="PDF File Service" Category="" ClassName="EnsLib.File.PassthroughService" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
     <Setting Target="Host" Name="TargetConfigNames">Oliver.BplPdfExtractText</Setting>
     <Setting Target="Adapter" Name="FilePath">/irisdev/app/data_example/</Setting>
     <Setting Target="Adapter" Name="FileSpec">*.pdf</Setting>
