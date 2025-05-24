@@ -11,7 +11,11 @@ XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
 <![CDATA[ Set text = request.OriginalFilename
  Set ^OLIVER($I(^OLIVER),"text") = text
  Set resp = ##class(Oliver.Ollama).SendChat(request.OriginalFilename)
- Set ^OLIVER($I(^OLIVER),"resp") = resp]]>
+ Set ^OLIVER($I(^OLIVER),"resp") = resp
+ Set response = ##class(Ens.StreamContainer).%New()
+ Set tStream = ##class(%Stream.FileCharacter).%New()
+ Set tSC = tStream.Write(resp)
+ Set response.Stream = tStream]]>
 </code>
 </sequence>
 </process>
