@@ -28,6 +28,8 @@ XData ProductionDefinition
     <Setting Target="Host" Name="TargetConfigNames">Oliver.BplSendChat</Setting>
     <Setting Target="Adapter" Name="FilePath">/tmp</Setting>
     <Setting Target="Adapter" Name="FileSpec">_2025*</Setting>
+    <Setting Target="Adapter" Name="ArchivePath">/tmp</Setting>
+    <Setting Target="Adapter" Name="WorkPath">/tmp</Setting>
   </Item>
   <Item Name="Oliver.BplSendChat" Category="" ClassName="Oliver.BplSendChat" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
   </Item>
