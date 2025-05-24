@@ -6,6 +6,15 @@ I have downloaded PDF Medical Visit Summaries from my Doctor's patient portal.
 
 ![screenshot](https://github.com/oliverwilms/bilder/blob/main/visitSummary.JPG)
 
+I created an Interoperability Production. First I created a generic REST service so that I could trace requests and responses going to ollama.
+
+![screenshot](https://github.com/oliverwilms/bilder/blob/main/Oliver_NewProduction.JPG)
+
+Later I added a File Service to pick up PDF files. I created a BPL to extract text from the PDF files. I sent the text as a StreamContainer to a File Passthrough operation.
+
+Then I created anothr File Service to pick up the text files. I created anbother BPL to call a classmethod to invoke SendChat() to ollama.
+
+
 This example also shows how to separate the data loading from the query, which is a more real-world scenario.
 
 ## Requirements
