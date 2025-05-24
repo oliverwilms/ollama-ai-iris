@@ -5,6 +5,8 @@ Class Install.Installer
 
 Parameter NAMESPACE As STRING = "IRISAPP";
 
+Parameter SourceDir As STRING = "/irisdev/app/src/Oliver";
+
 XData Install [ XMLNamespace = INSTALLER ]
 {
 <Manifest>
@@ -15,6 +17,7 @@ XData Install [ XMLNamespace = INSTALLER ]
             <Database Name="${NAMESPACE}" Dir="${MGRDIR}${DBNAME}" Create="yes" MountAtStartup="true"/>
             <GlobalMapping Global="excel" From="USER"/>
         </Configuration>
+        <Import File="${SourceDir}" Flags="ck" Recurse="1"/>
         <Log Text="Enable interoperability to ${NAMESPACE}..." Level="0"/>
 	<Invoke Class="%Library.EnsembleMgr" Method="EnableNamespace" CheckStatus="true">
             <Arg name="pTargetNS" Value="${NAMESPACE}"/>
