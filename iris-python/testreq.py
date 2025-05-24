@@ -11,6 +11,7 @@ def read_file(file_path: str):
     """
     Read some text from a text file.
     """
+    logger.debug(file_path)
     with open(file_path, "r") as f:
         file_data = f.read()
         logger.debug(file_data)
