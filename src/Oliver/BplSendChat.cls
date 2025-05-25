@@ -2,11 +2,16 @@
 Class Oliver.BplSendChat Extends Ens.BusinessProcessBPL
 {
 
+Storage Default
+{
+<Type>%Storage.Persistent</Type>
+}
+
 /// BPL Definition
 XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
 {
 <process language='objectscript' request='Ens.StreamContainer' response='Ens.StreamContainer' height='2000' width='2000' >
-<sequence xend='200' yend='350' >
+<sequence xend='200' yend='450' >
 <code name='SendChat' xpos='200' ypos='250' >
 <![CDATA[ Set text = request.OriginalFilename
  Set ^OLIVER($I(^OLIVER),"text") = text
@@ -20,13 +25,9 @@ XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
  Set ^OLIVER($I(^OLIVER),"response.%Save()") = tSC
  ]]>
 </code>
+<reply xpos='200' ypos='350' />
 </sequence>
 </process>
-}
-
-Storage Default
-{
-<Type>%Storage.Persistent</Type>
 }
 
 }
