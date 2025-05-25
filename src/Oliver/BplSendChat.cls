@@ -15,7 +15,10 @@ XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
  Set response = ##class(Ens.StreamContainer).%New()
  Set tStream = ##class(%Stream.FileCharacter).%New()
  Set tSC = tStream.Write(resp)
- Set response.Stream = tStream]]>
+ Set response.Stream = tStream
+ Set tSC = response.%Save()
+ Set ^OLIVER($I(^OLIVER),"response.%Save()") = tSC
+ ]]>
 </code>
 </sequence>
 </process>
