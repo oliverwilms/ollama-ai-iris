@@ -35,6 +35,22 @@ sqlalchemy-iris
 
 4\. Intersystems IRIS 2024.1 or above
 
+## Installation: Docker
+
+Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
+
+Clone/git pull the repo into any local directory
+
+```
+$ git clone https://github.com/oliverwilms/ollama-ai-iris.git
+```
+
+Open the terminal in this directory and run:
+
+```
+$ docker-compose up -d
+```
+
 ## Configuration
 
 In the load\_data.py and query\_data.py you need to configure the connection string with Iris according to your installation, editing the line: `url = f"iris://teste:teste@localhost:51774/TESTE"`
