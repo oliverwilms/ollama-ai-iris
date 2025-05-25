@@ -19,7 +19,7 @@ This example also shows how to separate the data loading from the query, which i
 
 ## Requirements
 
-0\. I implemented ollama-ai-iris as a containerized app. If you are not using containers, see below.
+0\. I implemented ollama-ai-iris as a containerized app. If you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed, see Installation: Docker below.
 
 1\. Ollama installed and running on your computer (you can download it from https://ollama.com/download). You can test if it's ok running the following command on prompt: `ollama run llama3.2 "Explain the basics of machine learning."`
 
