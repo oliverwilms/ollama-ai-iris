@@ -20,7 +20,7 @@ def read_file(file_path: str):
         modified_string = re.sub(r'"', "'", original_string)
         return modified_string
 
-def send_chat(prompt_path: str):
+def req_data(prompt_path: str):
     prompt_data = read_file(prompt_path)
     print({prompt_data})
     question_path = "/irisdev/app/data/prompts/medical_progress_notes_prompt.txt"
@@ -31,8 +31,12 @@ def send_chat(prompt_path: str):
     data2 = data1.replace("$prompt",prompt_data)
     print(data2)
     logger.debug(data2)
+    return data2
+
+def send_chat(prompt_path: str, url: str):
+    data2 = req_data(prompt_path)
     s = Session()
-    url = "http://ollama:11434/api/chat"
+    
     req = Request('POST', url, data=data2,)
     #prepped = req.prepare()
     prepped = s.prepare_request(req)
@@ -67,3 +71,13 @@ def send_chat(prompt_path: str):
             answer.append(content)
     print(str(answer))
     return str(answer)
+
+def send_chat_iris(prompt_path: str):
+    url = "http://localhost:53795/api/test/Service"
+    answer = send_chat(prompt_path, url)
+    return answer
+
+def send_chat_ollama(prompt_path: str):
+    url = "http://ollama:11434/api/chat"
+    answer = send_chat(prompt_path, url)
+    return answer
