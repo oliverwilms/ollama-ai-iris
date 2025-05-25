@@ -1,14 +1,14 @@
 Class Oliver.Ollama Extends %RegisteredObject
 {
 
-ClassMethod SendChat(pPath As %String) As %String
+ClassMethod SendChat(pPath As %String, pServer As %String = "ollama", pPort = 11434, pWebApp = "/api/chat") As %String
 {
   #Dim pRequest As %Net.HttpRequest = ""
   #Dim pResponse As %Net.HttpResponse = ""
   #Dim pSendSC As %Status = $$$OK
-  Set pURL = "http://ollama:11434/api/chat"
-  Set pAdapterServer = "ollama"
-  Set pAdapterPort = 11434
+  Set pURL = "http://"_pServer_":"_pPort_pWebApp
+  Set pAdapterServer = pServer
+  Set pAdapterPort = pPort
   Set pUnitTest = ""
   Set pFilename = $Get(pPath)
   Set oResponseTime = ##class(Oliver.ResponseTime).NewRequest(pRequest, pURL, pAdapterServer, pAdapterPort, pUnitTest, pFilename)
@@ -16,8 +16,8 @@ ClassMethod SendChat(pPath As %String) As %String
   Set resp = ""
   Try {
     Set testreq = ##class(%SYS.Python).Import("testreq")
-    Set resp = testreq."send_chat"(pPath, pURL)
-    Set tSC = oResponseTime.zSaveResponse(resp)
+    Set resp = testreq."send_chat"(pPath)
+    Set tSC = oResponseTime.zSaveResponse(resp, pURL)
     zw resp
   }
   Catch exp {
@@ -49,6 +49,11 @@ ClassMethod SendChat(pPath As %String) As %String
     WRITE "Data: ",exp.Data,!     
   }
   Return resp
+}
+
+ClassMethod SendChatIris(pPath As %String = "", pServer As %String = "localhost", pPort = 53795, pWebApp = "/api/test") As %String
+{
+  Quit ..SendChat(pPath, pServer, pPort, pWebApp)
 }
 
 }
