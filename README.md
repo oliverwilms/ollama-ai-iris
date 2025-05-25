@@ -19,6 +19,8 @@ This example also shows how to separate the data loading from the query, which i
 
 ## Requirements
 
+0\. I implemented ollama-ai-iris as a containerized app. If you are not using containers, see below.
+
 1\. Ollama installed and running on your computer (you can download it from https://ollama.com/download). You can test if it's ok running the following command on prompt: `ollama run llama3.2 "Explain the basics of machine learning."`
 
 2\. Python 3.12 or above
@@ -77,3 +79,4 @@ Ollama is an open source tool that runs large language models (LLMs) directly on
 
 Thanks to [llama-iris](https://openexchange.intersystems.com/package/llama-iris) library by @Dmitry Maslennikov and to [iris-vector-search](https://openexchange.intersystems.com/package/iris-vector-search) by @Alvin Ryanputra 
 
+I had seen in [Guillaume Rongier's](https://github.com/grongierisc) Open Exchange app [iris-rag-demo](https://openexchange.intersystems.com/package/iris-rag-demo) how to deploy ollama container via [docker-compose.yml](https://github.com/grongierisc/iris-rag-demo/blob/master/docker-compose.yml).
