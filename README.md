@@ -4,6 +4,10 @@
 
 In order to automate processing medical PDF documents I want to employ AI to identify information such as Patient, Provider and Chief Complaint. I have developed this [prompt](https://github.com/oliverwilms/ollama-ai-iris/blob/main/data/prompts/medical_progress_notes_prompt.txt) to instruct AI what I am looking for.
 
+## How can I get AI to process my request?
+
+I looked at this [API](https://github.com/ollama/ollama/blob/main/docs/api.md#generate-a-chat-completion):
+
 ## What is in ollama-ai-iris?
 
 I have downloaded PDF Medical Visit Summaries from my Doctor's patient portal.
