@@ -1,6 +1,10 @@
 # Ollama AI IRIS
 
-In this code we will show how to use Ollama with IRIS.
+## My first AI use case
+
+In order to automate processing medical PDF documents I want to employ AI to identify information such as Patient, Provider and Chief Complaint. I have developed this [prompt](https://github.com/oliverwilms/ollama-ai-iris/blob/main/data/prompts/medical_progress_notes_prompt.txt) to instruct AI what I am looking for.
+
+## What is in ollama-ai-iris?
 
 I have downloaded PDF Medical Visit Summaries from my Doctor's patient portal.
 
