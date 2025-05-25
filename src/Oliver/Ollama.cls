@@ -16,7 +16,7 @@ ClassMethod SendChat(pPath As %String) As %String
   Set resp = ""
   Try {
     Set testreq = ##class(%SYS.Python).Import("testreq")
-    Set resp = testreq."send_chat"(pPath)
+    Set resp = testreq."send_chat"(pPath, pURL)
     Set tSC = oResponseTime.zSaveResponse(resp)
     zw resp
   }
