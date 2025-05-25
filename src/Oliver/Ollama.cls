@@ -16,8 +16,8 @@ ClassMethod SendChat(pPath As %String, pServer As %String = "ollama", pPort = 11
   Set resp = ""
   Try {
     Set testreq = ##class(%SYS.Python).Import("testreq")
-    Set resp = testreq."send_chat"(pPath)
-    Set tSC = oResponseTime.zSaveResponse(resp, pURL)
+    Set resp = testreq."send_chat"(pPath, pURL)
+    Set tSC = oResponseTime.zSaveResponse(resp)
     zw resp
   }
   Catch exp {
