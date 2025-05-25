@@ -30,10 +30,14 @@ XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
 <code name='context.newRequest' xpos='200' ypos='350' >
 <![CDATA[ Set context.newRequest = ##class(Ens.StreamContainer).%New()
  Set tPdf = request.OriginalFilename
- Set context.newRequest.OriginalFilename = $Replace(tPdf,".pdf",".txt")
+ Set tPdfFilename = ##class(%File).GetFilename(tPdf)
+ Set ^OLIVER($I(^OLIVER),"tPdfFilename") = tPdfFilename
+ Set context.newRequest.OriginalFilename = $Replace(tPdfFilename,".pdf",".txt")
  Set tStream = ##class(%Stream.FileCharacter).%New()
  Set tSC = tStream.Write(context.text)
  Set context.newRequest.Stream = tStream
+ Set tSC = context.newRequest.%Save()
+ Set ^OLIVER($I(^OLIVER),"context.newRequest.%Save()") = tSC
  ]]>
 </code>
 <call name='EnsLib.File.PassthroughOperation' target='EnsLib.File.PassthroughOperation' async='1' xpos='200' ypos='450' >
