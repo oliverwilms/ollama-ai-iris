@@ -24,7 +24,7 @@ XData Install [ XMLNamespace = INSTALLER ]
             <Arg name="pVerbose" Value="1"/>
 	</Invoke>
     </Namespace>
-    <If Condition='(##class(Security.Applications).Exists("/restapi")=0)'>
+    <If Condition='(##class(Security.Applications).Exists("/api/test")=0)'>
         <Log Text="Creating web application /api/test" Level="0"/>
         <RunInstall Class="Install.Installer" Method="CreateWebAppREST"/>
     </If>
@@ -78,6 +78,7 @@ ClassMethod CreateWebAppREST(pVars, pLogLevel, tInstaller) As %Status
   Set cspProperties("DeepSeeEnabled") = 1
   Set cspProperties("iKnowEnabled") = 0
   Set cspProperties("DispatchClass") = "EnsLib.REST.GenericService"
+  Set cspProperties("MatchRoles") = "%All"
   Set cspProperties("Resource") = ""
   Set cspProperties("ServeFiles") = 1
   Set tSC = ##class(Security.Applications).Create(cspName,.cspProperties)
