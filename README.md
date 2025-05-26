@@ -7,7 +7,7 @@ In order to automate processing medical PDF documents I want to employ AI to ide
 ## How can I get AI to process my request?
 
 I looked at this [API](https://github.com/ollama/ollama/blob/main/docs/api.md#generate-a-chat-completion) and created a Generic REST interface to capture requests and responses.
-Here is an example ![request](https://github.com/oliverwilms/bilder/blob/main/Capture_request.JPG) and ![response](https://github.com/oliverwilms/bilder/blob/main/Capture_response.JPG)
+Below are examples of a request: ![request](https://github.com/oliverwilms/bilder/blob/main/Capture_request.JPG) and the corresponding response from ollama: ![response](https://github.com/oliverwilms/bilder/blob/main/Capture_response.JPG)
 
 ## What is in ollama-ai-iris?
 
