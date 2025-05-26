@@ -22,6 +22,19 @@ I already mentioned that I created an Interoperability [Production](https://gith
 
 Then I created another File Service to pick up the text files, and I created another BPL where I call an IRIS ObjectScript classmethod to invoke SendChat() to ollama. Here I employ a persistent class to measure response times and keep track of the responses coming back from ollama.
 
+To open IRIS Terminal do:
+
+```
+$ docker-compose exec iris iris session iris -U IRISAPP
+IRISAPP>
+```
+
+To exit the terminal, do any of the following:
+
+```
+Enter h, halt, HALT or H (not case-sensitive)
+```
+
 ## Requirements
 
 0\. I implemented ollama-ai-iris as a containerized app. If you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed, see Installation: Docker below.
