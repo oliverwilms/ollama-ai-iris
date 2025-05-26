@@ -6,7 +6,8 @@ In order to automate processing medical PDF documents I want to employ AI to ide
 
 ## How can I get AI to process my request?
 
-I looked at this [API](https://github.com/ollama/ollama/blob/main/docs/api.md#generate-a-chat-completion) and created a Generic REST interface to capture requests and responses.
+I looked at this [API](https://github.com/ollama/ollama/blob/main/docs/api.md#generate-a-chat-completion) and created an Interoperability production with a Generic REST interface to capture requests and responses:
+![screenshot](https://github.com/oliverwilms/bilder/blob/main/Oliver_NewProduction.JPG)
 Below are examples of a request: ![request](https://github.com/oliverwilms/bilder/blob/main/Capture_request.JPG) and the corresponding response from ollama: ![response](https://github.com/oliverwilms/bilder/blob/main/Capture_response.JPG)
 
 It was not what I expected.
@@ -19,7 +20,7 @@ I have downloaded PDF Medical Visit Summaries from my Doctor's patient portal.
 
 I created an Interoperability Production. First I created a generic REST service so that I could trace requests and responses going to ollama.
 
-![screenshot](https://github.com/oliverwilms/bilder/blob/main/Oliver_NewProduction.JPG)
+
 
 Later I added a File Service to pick up PDF files. I created a BPL to extract text from the PDF files. I sent the text as a StreamContainer to a File Passthrough operation.
 
