@@ -18,16 +18,9 @@ I have downloaded PDF Medical Visit Summaries from my Doctor's patient portal.
 
 ![screenshot](https://github.com/oliverwilms/bilder/blob/main/visitSummary.JPG)
 
-I created an Interoperability Production. First I created a generic REST service so that I could trace requests and responses going to ollama.
+I already mentioned that I created an Interoperability [Production](https://github.com/oliverwilms/ollama-ai-iris/blob/main/src/Oliver/NewProduction.cls). First I created a generic REST interface so that I could trace requests and responses going to ollama. Later I added a File Service to pick up PDF files, and created a BPL to extract text from the PDF files. I sent the text as a StreamContainer to a File Passthrough operation.
 
-
-
-Later I added a File Service to pick up PDF files. I created a BPL to extract text from the PDF files. I sent the text as a StreamContainer to a File Passthrough operation.
-
-Then I created another File Service to pick up the text files. I created another BPL to call a classmethod to invoke SendChat() to ollama.
-
-
-This example also shows how to separate the data loading from the query, which is a more real-world scenario.
+Then I created another File Service to pick up the text files, and I created another BPL where I call an IRIS ObjectScript classmethod to invoke SendChat() to ollama. Here I employ a persistent class to measure response times and keep track of the responses coming back from ollama.
 
 ## Requirements
 
