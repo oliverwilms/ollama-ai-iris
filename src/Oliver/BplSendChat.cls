@@ -50,6 +50,7 @@ XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
 <request type='Ens.StreamContainer' >
 <assign property="callrequest" value="context.newRequest" action="set" languageOverride="" />
 </request>
+<response type='Ens.Response' />
 </call>
 <reply xpos='200' ypos='550' />
 </sequence>
