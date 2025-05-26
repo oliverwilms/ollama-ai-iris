@@ -32,10 +32,10 @@ XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
  Set tPdf = request.OriginalFilename
  Set tPdfFilename = ##class(%File).GetFilename(tPdf)
  Set ^OLIVER($I(^OLIVER),"tPdfFilename") = tPdfFilename
- Set context.newRequest.OriginalFilename = $Replace(tPdfFilename,".pdf",".txt")
  Set tStream = ##class(%Stream.FileCharacter).%New()
  Set tSC = tStream.Write(context.text)
  Set context.newRequest.Stream = tStream
+ Set context.newRequest.OriginalFilename = $Replace(tPdfFilename,".pdf",".txt")
  Set tSC = context.newRequest.%Save()
  Set ^OLIVER($I(^OLIVER),"context.newRequest.%Save()") = tSC
  ]]>
