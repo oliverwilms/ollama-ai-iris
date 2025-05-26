@@ -6,7 +6,7 @@ XData ProductionDefinition
 <Production Name="Oliver.NewProduction" LogGeneralTraceEvents="false">
   <Description></Description>
   <ActorPoolSize>2</ActorPoolSize>
-  <Item Name="REST Service" Category="" ClassName="EnsLib.REST.GenericService" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
+  <Item Name="EnsLib.REST.GenericService" Category="" ClassName="EnsLib.REST.GenericService" PoolSize="1" Enabled="false" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
     <Setting Target="Host" Name="TargetConfigName">ollama</Setting>
   </Item>
   <Item Name="ollama" Category="" ClassName="EnsLib.REST.GenericOperation" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
@@ -28,8 +28,8 @@ XData ProductionDefinition
     <Setting Target="Host" Name="TargetConfigNames">Oliver.BplSendChat</Setting>
     <Setting Target="Adapter" Name="FilePath">/tmp</Setting>
     <Setting Target="Adapter" Name="FileSpec">_2025*</Setting>
-    <Setting Target="Adapter" Name="ArchivePath">/tmp</Setting>
-    <Setting Target="Adapter" Name="WorkPath">/tmp</Setting>
+    <Setting Target="Adapter" Name="ArchivePath">/usr/irissys/mgr/iristemp</Setting>
+    <Setting Target="Adapter" Name="WorkPath">/usr/irissys/mgr/iristemp</Setting>
   </Item>
   <Item Name="Oliver.BplSendChat" Category="" ClassName="Oliver.BplSendChat" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
   </Item>
