@@ -22,6 +22,10 @@ I already mentioned that I created an Interoperability [Production](https://gith
 
 Then I created another File Service to pick up the text files, and I created another BPL where I call an IRIS ObjectScript classmethod to invoke SendChat() to ollama. Here I employ a persistent class to measure response times and keep track of the responses coming back from ollama.
 
+When the Production is running, it picks up any *.pdf file in /irisdev/app/data_example/ directory. This directory is mapped to the data_example directory where you cloned the git repository. Any pdf file you copy into the data_example directory in the git directory or /irisdev/app/data_example/ inside the iris container will process in the production.
+
+
+
 To open IRIS Terminal do:
 
 ```
