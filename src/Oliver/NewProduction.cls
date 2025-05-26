@@ -13,6 +13,7 @@ XData ProductionDefinition
     <Setting Target="Adapter" Name="HTTPPort">11434</Setting>
     <Setting Target="Adapter" Name="HTTPServer">ollama</Setting>
     <Setting Target="Adapter" Name="URL">/api/chat</Setting>
+    <Setting Target="Adapter" Name="ResponseTimeout">600</Setting>
   </Item>
   <Item Name="PDF File Service" Category="" ClassName="EnsLib.File.PassthroughService" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
     <Setting Target="Host" Name="TargetConfigNames">Oliver.BplPdfExtractText</Setting>
