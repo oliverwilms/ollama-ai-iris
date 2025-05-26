@@ -51,7 +51,7 @@ ClassMethod SendChat(pPath As %String, pServer As %String = "ollama", pPort = 11
   Return resp
 }
 
-ClassMethod SendChatIris(pPath As %String = "", pServer As %String = "localhost", pPort = 52773, pWebApp = "/api/test") As %String
+ClassMethod SendChatIris(pPath As %String = "", pServer As %String = "localhost", pPort = 52773, pWebApp = "/api/test/EnsLib.REST.GenericService") As %String
 {
   Quit ..SendChat(pPath, pServer, pPort, pWebApp)
 }
