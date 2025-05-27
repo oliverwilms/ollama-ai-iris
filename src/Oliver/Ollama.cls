@@ -18,7 +18,7 @@ ClassMethod SendChat(pPath As %String, pServer As %String = "ollama", pPort = 11
     Set testreq = ##class(%SYS.Python).Import("testreq")
     Set resp = testreq."send_chat"(pPath, pURL)
     Set tSC = oResponseTime.zSaveResponse(resp)
-    zw resp
+    Set resp = ..DecodeTokenArray(resp)
   }
   Catch exp {
     Set ^OLIVER($I(^OLIVER),"Catch") = exp
@@ -62,6 +62,12 @@ ClassMethod TestResponse(pId As %String = 1) As %String
   Try {
     Set tResponse = oResponseTime.yResponse
     Set resp = ..DecodeTokenArray(tResponse)
+    If ("" '= oResponseTime.zPatient) {
+      Set zPatient = ..DecodeTokenArray(oResponseTime.zPatient)
+      Set zPatient = oResponseTime.zPatient
+      //zw zPatient
+      Set resp = zPatient
+    }
   }
   Catch exp {
     Set ^OLIVER($I(^OLIVER),"Catch") = exp
