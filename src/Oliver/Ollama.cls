@@ -57,25 +57,11 @@ ClassMethod SendChatIris(pPath As %String = "", pServer As %String = "localhost"
 
 ClassMethod TestResponse(pId As %String = 1) As %String
 {
-  Set delim = ", "
   Set oResponseTime = ##class(Oliver.ResponseTime).%OpenId(pId)
   Set resp = ""
   Try {
     Set tResponse = oResponseTime.yResponse
-    If ($Extract(tResponse,1,1) = "["),($Extract(tResponse,*,*) = "]") Set tResponse = $Extract(tResponse,2,*-1)
-    Set len = $Length(tResponse, delim)
-    For ii = 1:1:len {
-      Set token = $Piece(tResponse, delim, ii)
-      Set quote = $Extract(token,1,1)
-      Set qlen = $Length(token, quote)
-      If (qlen = 3) {
-        Set resp = resp_$Piece(token,quote,2)
-        Continue
-      }
-      zw qlen
-      zw token
-      Quit
-    }
+    Set resp = ..DecodeTokenArray(tResponse)
   }
   Catch exp {
     Set ^OLIVER($I(^OLIVER),"Catch") = exp
@@ -104,6 +90,27 @@ ClassMethod TestResponse(pId As %String = 1) As %String
     ELSE { WRITE "Some other type of exception",! }
     WRITE exp.Code,!
     WRITE "Data: ",exp.Data,!     
+  }
+  Return resp
+}
+
+ClassMethod DecodeTokenArray(pTokenArray As %String = "") As %String
+{
+  Set delim = ", "
+  If ($Extract(pTokenArray,1,1) = "["),($Extract(pTokenArray,*,*) = "]") Set pTokenArray = $Extract(pTokenArray,2,*-1)
+  Set len = $Length(pTokenArray, delim)
+  Set resp = ""
+  For ii = 1:1:len {
+    Set token = $Piece(pTokenArray, delim, ii)
+    Set quote = $Extract(token,1,1)
+    Set qlen = $Length(token, quote)
+    If (qlen = 3) {
+      Set resp = resp_$Piece(token,quote,2)
+      Continue
+    }
+    zw qlen
+    zw token
+    Quit
   }
   Return resp
 }
