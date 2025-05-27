@@ -100,6 +100,7 @@ ClassMethod DecodeTokenArray(pTokenArray As %String = "") As %String
   If ($Extract(pTokenArray,1,1) = "["),($Extract(pTokenArray,*,*) = "]") Set pTokenArray = $Extract(pTokenArray,2,*-1)
   Set len = $Length(pTokenArray, delim)
   Set resp = ""
+  If (pTokenArray = "") { Quit resp }
   For ii = 1:1:len {
     Set token = $Piece(pTokenArray, delim, ii)
     Set quote = $Extract(token,1,1)
