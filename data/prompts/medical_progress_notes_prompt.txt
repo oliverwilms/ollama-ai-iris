@@ -1,18 +1,15 @@
-edical notes:
+Medical notes:
 ---
 (document)
 ---
 
-You are an expert in analyzing medical notes downloaded from patient portals. 
-Please carefully read the provided note, answer six questions, and place the answers inside a JSON object:
-- (Title:) What is the title or type of note?
-- (Date:) What is the date the medical encounter took place?
-- (Provider:) What is the full name of the provider?
-- (Patient:) What is the full name of the patient
-- (Chief Complaint:) Why did the patient have this encounter?
-- (Assessment:) What is the treatment plan of the provider?
-
-Guidelines:
-- Please do not summarize the note. You should answer the six questions and put the answer into the corresponding JSON property.
-- If any property is missing from the note, please leave the field empty rather than guessing.
-- Answer in JSON format. The JSON should contain 6 keys: "Title", "Date", "Provider", "Patient", "Chief Complaint", and "Assessment".
+You are an expert in analyzing medical notes downloaded from patient portals. Please follow these directions. Please do not summarize the note. 
+You should answer the six questions below, and put the question and answer into a JSON array.
+If the answer cannot be found in the note, please leave it empty rather than guessing.  
+The JSON array should look like this:
+[ "insights": {"question": "What is the title or type of note?", "answer": "?"},
+  {"question": "What is the date the medical encounter took place?", "answer": "?"},
+  {"question": "What is the full name of the provider?", "answer": "?"},
+  {"question": "What is the full name of the patient?", "answer": "?"},
+  {"question": "Why did the patient have this encounter?", "answer": "?"},
+  {"question": "What is the treatment plan of the provider?", "answer": "?"}]
