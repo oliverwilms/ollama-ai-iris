@@ -1,0 +1,313 @@
+Important: Please note only data that has clinical mapping will be shared/transmitted. 
+The following sections represent the most current data on record and are not specific to the date of the Visit: Demographics, Social History,
+Problems, Allergies, Immunizations, Health Concerns, and Medical Equipment (UDI). 
+Patient Details
+Patient name
+Oliver WilmsContact info
+2444 Falcon Point Dr
+Frisco, TX 75033, US
+ Patient IDs
+164557
+164557
+February 28, 1964 tel:972-261-6717Sex
+Male
+LANGUAGE
+EnglishRACEETHNICITY
+Refused to Report
+Care
+Giver
+primary
+care
+physicianBradley Friedman
+Contact
+Info2701 LITTLE ELM PKWY
+STE 115
+LITTLE ELM, TX 75068-6680, US
+Tel: 940-580-2474
+Legal authenticator Bradley Friedman signed at October 18, 2023
+Contact info2701 LITTLE ELM PKWY
+STE 115
+LITTLE ELM, TX 75068-6680, US
+Tel: 940-580-2474
+Allergies
+No Known Allergies
+Results
+Component ValueReference Range Notes
+Welch Allyn Electrocardiogram (ECG)
+Reviewed date:10/18/2023 09:43:47 AM
+Interpretation:
+Performing Lab:
+Notes/Report:
+HR 66
+P 133WILMS, Oliver DOB: 02/28/1964 (61 yo M) Acc No. 164557PAxis 44
+PQ 165
+QRS 97
+QRSAxis 57
+QT 409
+QTc 420
+QTd 0
+TAxis 61
+9179 COMPREHENSIVE METABOLIC PANEL
+Reviewed date:10/19/2023 11:52:27 AM
+Interpretation:
+Performing Lab:
+Notes/Report:
+GLUCOSE 10170-99 MG/DL
+BUN 176-20 MG/DL
+CREATININE 0.820.80-1.40 MG/DL
+eGFR (2021 CKD-EPI) 101>60
+ML/MIN/1.73
+CALC BUN/CREAT 216-28 RATIO
+SODIUM 142133-146 MEQ/L
+POTASSIUM 3.93.5-5.4 MEQ/L
+CHLORIDE 10595-107 MEQ/L
+CARBON DIOXIDE 2619-31 MEQ/L
+CALCIUM 9.08.5-10.5 MG/DL
+PROTEIN, TOTAL 6.76.1-8.3 G/DL
+ALBUMIN 4.63.5-5.2 G/DL
+CALC GLOBULIN 2.11.9-3.7 G/DL
+CALC A/G RATIO 2.21.0-2.6 RATIO
+BILIRUBIN, TOTAL 0.7<=1.2 MG/DL
+ALKALINE PHOSPHATASE 5040-123 U/L
+AST 179-50 U/L
+ALT 155-50 U/L
+2835 TSH
+Reviewed date:10/19/2023 11:52:27 AM
+Interpretation:
+Performing Lab:
+Notes/Report:
+TSH, THIRD GENERATION 4.2600.400-4.100
+UIU/MLWILMS, Oliver DOB: 02/28/1964 (61 yo M) Acc No. 1645572606 PSA, TOTAL
+Reviewed date:10/19/2023 11:52:27 AM
+Interpretation:
+Performing Lab:
+Notes/Report:
+PSA, TOTAL 1.55<=4.00 NG/MLNOTE: Methodology is Roche Cobas Electrochemiluminescence
+Immunoassay traceable to WHO reference standard 96/760.
+UNLESS OTHERWISE INDICATED, ALL TESTING
+PERFORMED AT
+CLINICAL PATHOLOGY LABORATORIES, INC. 9200 WALL
+ST AUSTIN, TX 78754
+LABORATORY DIRECTOR: CHRISTINE BURGESS, M.D.
+CLIA NUMBER 45D0505003 CAP ACCREDITATION NO.
+21525-01
+1000 CBC W/AUTO DIFF
+Reviewed date:10/19/2023 11:52:27 AM
+Interpretation:
+Performing Lab:
+Notes/Report:
+WBC 4.43.5-11.0 K/UL
+RBC 5.254.50-6.10 M/UL
+HEMOGLOBIN 15.913.5-17.0 G/DL
+HEMATOCRIT 47.240.0-51.0 %
+MCV 89.980.0-99.0 fL
+MCH 30.325.0-33.0 PG
+MCHC 33.731.0-36.0 G/DL
+RDW 13.211.5-15.0 %
+NEUTROPHILS 48.5
+LYMPHOCYTES 40.9
+MONOCYTES 7.2
+EOSINOPHILS 2.3
+BASOPHILS 1.1
+NUCLEATED RBCS 0.00.0 /100 WBC'S
+PLATELET COUNT 175130-400 K/UL
+ABSOLUTE NEUTROPHILS 2.151.50-7.50 K/UL
+ABSOLUTE
+LYMPHOCYTES1.811.00-4.00 K/UL
+ABSOLUTE MONOCYTES 0.320.20-1.00 K/UL
+ABSOLUTE EOSINOPHILS 0.100.00-0.50 K/ULWILMS, Oliver DOB: 02/28/1964 (61 yo M) Acc No. 164557ABSOLUTE BASOPHILS 0.050.00-0.20 K/UL
+ABS IMMATURE
+GRANULOCYTES0.000.00-0.10 K/UL
+ABS NUCLEATED RBCS 0.000.00-0.11 K/UL
+IMMATURE
+GRANULOCYTES0.0
+173 LIPID PANEL
+Reviewed date:10/19/2023 11:52:27 AM
+Interpretation:
+Performing Lab:
+Notes/Report:
+CHOLESTEROL 212<200 MG/DL
+TRIGLYCERIDES 68<150 MG/DL
+HDL CHOLESTEROL 62>39 MG/DL
+CALC LDL CHOL 134<100 MG/DLNOTE: CALCULATED LDL IS BASED ON MARTIN-HOPKINS
+METHOD WHICH
+INCLUDES ADJUSTABLE TRIGLYCERIDE:VLDL
+CHOLESTEROL RATIO.
+THIS FACTOR VARIES BY MEASURED TRIGLYCERIDE AND
+NON-HDL
+CHOLESTEROL CONCENTRATIONS WITH INCREASED
+CALCULATED LDL SEEN
+IN HIGHER TRIGLYCERIDE OR LOWER NON-HDL
+SPECIMENS. FOR MORE
+INFORMATION, SEE CLIENT ANNOUNCEMENT AT
+http://www.cpllabs.com/CalcLDL-C
+RISK RATIO LDL/HDL 2.16<3.55 RATIO
+Urinalysis
+Reviewed date:10/19/2023 04:22:03 AM
+Interpretation:
+Performing Lab:
+Notes/Report:
+Color Yellow
+Clarity Clear
+GLU Neg
+BIL Neg
+KET Neg
+SG 1.015
+BLO Neg
+pH 6.0WILMS, Oliver DOB: 02/28/1964 (61 yo M) Acc No. 164557PRO Neg
+URO 0.2
+NIT Neg
+LEU Neg
+Reason For Referral
+No Information
+REASON FOR VISIT
+CPE- Patient is in for his annual physical. -SL
+Medications
+Medication SIG (Take, Route, Frequency, Duration) NotesStart DateEnd DateStatus
+Losartan Potassium 25 MG 1 tab(s) orally once a day for 90 days 08/19/2022 Active
+Immunizations
+Vaccine Route Administration Date Status Comments
+Boostrix Tdap over age 7 Unknown 11/12/2014 Administered Immunization Given by from source eCW::
+Influenza Quadrivalent IM Intramuscular 11/11/2016 Administered
+Twinrix Hep A-Hep B Unknown 01/15/2014 Administered Immunization Given by from source eCW::
+Social History
+Tobacco Use:
+Social History Observation Description Date
+Details (start date - stop date) Never Smoker NA - NA
+Alcohol Screen (Audit-C)
+Question Answer Notes
+Did you have a drink containing alcohol in the past year? Yes
+How often did you have a drink containing alcohol in the past year? 2 to 4 times a month (2 points)
+How many drinks did you have on a typical day when you were drinking in the past year? 1 or 2 drinks (0 point)
+Points 2
+Interpretation Negative
+Smoking
+Question Answer NotesWILMS, Oliver DOB: 02/28/1964 (61 yo M) Acc No. 164557Are you a: never smoker
+Section Notes:
+diet-moderate
+Problems
+Problem
+TypeSNOMED Code ICD CodeOnset
+DatesProblem
+StatusW/U
+StatusRiskNotes
+Problem267434003Mixed hyperlipidemia
+(E78.2)Active confirmed
+ProblemEssential hypertension
+(59621000)Essential (primary)
+hypertension (I10)Active confirmed
+Vital Signs
+Temperature 97.8 degrees Fahrenheit 10/18/2023
+Blood pressure systolic 142 mm Hg 10/18/2023
+Blood pressure diastolic 84 mm Hg 10/18/2023
+Heart Rate 71 /min 10/18/2023
+Respiratory Rate 16 /min 10/18/2023
+Height 72.5 in 10/18/2023
+Weight 189.8 lbs 10/18/2023
+BMI 25.38 kg/m2 10/18/2023
+Oximetry 98 % 10/18/2023
+Weight-kg 86.09 kg 10/18/2023
+Procedures
+No Information
+Encounters
+Encounter Location DateProviderDiagnosis
+ZZ Do not Use Valora
+Medical - Frisco11560 TEEL PKWY Suite 100
+FRISCO, TX 75033-443010/18/2023Bradley
+FriedmanEncounter for general adult medical
+examination without abnormal findings
+Z00.00
+Medical Equipment
+No InformationWILMS, Oliver DOB: 02/28/1964 (61 yo M) Acc No. 164557Assessments
+Encounter
+DateDiagnosis (ICD Code) Treatment NotesSection
+Notes
+10/18/2023Encounter for general adult medical examination
+without abnormal findings (ICD-10 - Z00.00)Discussed preventive health needs in detail
+including diet and exercise and age appropriate
+screenings
+Plan Of Treatment
+Medication
+Medication Name Sig Start Date Stop Date Notes
+Losartan Potassium 25 MG 1 tab(s) orally once a day for 90 days 08/19/2022
+Treatment Notes
+Assessment Notes
+Encounter for general adult medical examination
+without abnormal findingsDiscussed preventive health needs in detail including diet and exercise and
+age appropriate screenings
+Next Appt
+Details
+Follow Up: 6 Months, Reason:
+Goals Section
+No Information
+Health Concerns
+No Information
+Insurance Providers
+Payer NamePayer
+AddressPayer PhoneSubscriber
+NumberGroup
+NumberInsured
+NamePatient
+Relationship
+to InsuredCoverage
+Start DateCoverage
+End Date
+UNITED
+HEALTHCAREP.O. Box
+30555 Salt
+Lake City, UT
+841300555877-842-3210 981376208919002Wilms,
+OliverSelf - patient is
+the insured
+Progress Notes
+Examination
+Category Sub-Category Detail NotesCategory
+NotesWILMS, Oliver DOB: 02/28/1964 (61 yo M) Acc No. 164557General ExaminationGENERAL
+APPEARANCE:alert, in no distress
+HEAD: normal
+EYES:extraocular movement intact (EOMI), pupils equal, round, reactive to
+light and accommodation
+EARS: normal, tympanic membranes intact, clear, Bilateral
+THROAT: clear
+NECK/THYROID: neck supple, no lymphadenopathy, no masses, no thyromegaly,
+HEART: RRR, No M/G/R
+LUNGS: CTA B
+ABDOMEN: s/NT/ND BS +
+NEUROLOGIC: cranial nerves 2-12 grossly intact
+SKIN: normal
+EXTREMITIES: no clubbing, cyanosis, or edema
+ORAL CAVITY: mucosa moist
+ 
+History and Physical Notes
+HPI (History of Present Illness)
+Category Sub-Category Detail NotesCategory
+Notes
+ConstitutionalHere for
+CPE. Doing
+well and no
+concerns.
+Here for
+medication
+follow up.
+denies
+problems or
+side effects,
+taking
+medication
+consistently.
+Feeling like
+they are
+working
+appropriately
+ 
+Care team
+Emergency
+contactRose Wilms
+ 
+Contact2444 Falcon Point DrWILMS, Oliver DOB: 02/28/1964 (61 yo M) Acc No. 164557infoFrisco, TX 75035-0000, US
+Tel: 469-744-0422
+GuarantorOliver Wilms
+Contact
+infoTel: 972-261-6717
+©Powered by eClinicalWorks
+ WILMS, Oliver DOB: 02/28/1964 (61 yo M) Acc No. 164557
