@@ -1,5 +1,9 @@
 # Ollama AI IRIS
 
+## Online demo
+
+You can view ollama-ai-iris online demo [here](http://54.186.6.69:53795/csp/irisapp/EnsPortal.ProductionConfig.zen?PRODUCTION=Oliver.NewProduction). Top secret: the password is 'SYS'
+
 ## My first AI use case
 
 In order to automate processing medical PDF documents I want to employ AI to identify information such as Patient, Provider and Chief Complaint. I have developed this [prompt](https://github.com/oliverwilms/ollama-ai-iris/blob/main/data/prompts/medical_progress_notes_prompt.txt) to instruct AI what I am looking for.
