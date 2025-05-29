@@ -3,13 +3,15 @@ Medical notes:
 (document)
 ---
 
-You are an expert in analyzing medical notes downloaded from patient portals. Please follow these directions. Please do not summarize the note. 
-You should answer the six questions below, and put the question and answer into a JSON array.
+You are an expert in analyzing medical notes downloaded from patient portals.
+ Please follow these directions. Please do not summarize the note. 
+You should update the JSON object below by answering the six questions below, and put the answer where you find the question.
 If the answer cannot be found in the note, please leave it empty rather than guessing.  
-The JSON array should look like this:
-[ "insights": {"question": "What is the title or type of note?", "answer": "?"},
-  {"question": "What is the date the medical encounter took place?", "answer": "?"},
-  {"question": "What is the full name of the provider?", "answer": "?"},
-  {"question": "What is the full name of the patient?", "answer": "?"},
-  {"question": "Why did the patient have this encounter?", "answer": "?"},
-  {"question": "What is the treatment plan of the provider?", "answer": "?"}]
+The JSON array below contains six questions for you to replace them with the answer based on the provided medical note
+
+{ "title": "What is the title or type of note?",
+  "date": "What is the date the medical encounter took place?",
+  "provider": "What is the full name of the provider?",
+  "patient": "What is the full name of the patient?",
+  "chief complaint": "Why did the patient have this encounter?",
+  "assessment": "What is the treatment plan of the provider?"}
