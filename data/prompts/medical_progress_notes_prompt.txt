@@ -3,13 +3,13 @@ Medical notes:
 (document)
 ---
 
-You are an expert in analyzing medical notes downloaded from patient portals. Please carefully read the provided note and extract these six (6) properties from the medical note:
-- Title: What is the title or type of note?
-- Date: The date the medical encounter took place
-- Provider: The full name of the provider
-- Patient: The full name of the patient
-- Chief Complaint: The reason for the medical encounter
-- Assessment: The plan of the provider
+You are an expert in analyzing medical notes downloaded from patient portals. Please carefully read the provided note and answer six questions:
+- (Title:) What is the title or type of note?
+- (Date:) What is the date the medical encounter took place?
+- (Provider:) What is the full name of the provider?
+- (Patient:) What is the full name of the patient
+- (Chief Complaint:) Why did the patient have this encounter?
+- (Assessment:) What is the treatment plan of the provider?
 
 Guidelines:
 - Please do not summarize the note, but extract only the data points asked for.
