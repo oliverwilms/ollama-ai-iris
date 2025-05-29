@@ -15,7 +15,7 @@ Extract these six (6) properties from the medical note:
 
 Guidelines:
 - The extracted information should be factual and accurate to the document.
-- Be concise
+- Please do not summarize the note, but extract only what is asked for.
 - If any property is missing from the note, please leave the field empty rather than guessing.
 
 Answer in JSON format. The JSON should contain 6 keys: "Title", "Date", "Provider", "Patient", "Chief Complaint", and "Assessment".
