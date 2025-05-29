@@ -1,9 +1,10 @@
-Medical notes:
+edical notes:
 ---
 (document)
 ---
 
-You are an expert in analyzing medical notes downloaded from patient portals. Please carefully read the provided note and answer six questions:
+You are an expert in analyzing medical notes downloaded from patient portals. 
+Please carefully read the provided note, answer six questions, and place the answers inside a JSON object:
 - (Title:) What is the title or type of note?
 - (Date:) What is the date the medical encounter took place?
 - (Provider:) What is the full name of the provider?
@@ -12,6 +13,6 @@ You are an expert in analyzing medical notes downloaded from patient portals. Pl
 - (Assessment:) What is the treatment plan of the provider?
 
 Guidelines:
-- Please do not summarize the note, but extract only the data points asked for.
+- Please do not summarize the note. You should answer the six questions and put the answer into the corresponding JSON property.
 - If any property is missing from the note, please leave the field empty rather than guessing.
 - Answer in JSON format. The JSON should contain 6 keys: "Title", "Date", "Provider", "Patient", "Chief Complaint", and "Assessment".
