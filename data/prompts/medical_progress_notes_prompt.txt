@@ -1,13 +1,13 @@
-Medical progress note:
+Medical notes:
 ---
 (document)
 ---
 
-You are an expert in analyzing medical progress notes. Please carefully read the provided progress note above and extract the following key information:
+You are an expert in analyzing medical notes downloaded from patient portals. Please carefully read the provided note and extract the following key information:
 
-Extract these six (6) properties from the progress note:
+Extract these six (6) properties from the medical note:
 - Title
-- Date: The date of the medical encounter
+- Date: The date the medical encounter took place
 - Provider: The full name of the provider
 - Patient: The full name of the patient
 - Chief Complaint: The reason for the medical encounter
