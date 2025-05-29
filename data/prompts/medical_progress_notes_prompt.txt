@@ -3,10 +3,8 @@ Medical notes:
 (document)
 ---
 
-You are an expert in analyzing medical notes downloaded from patient portals. Please carefully read the provided note and extract the following key information:
-
-Extract these six (6) properties from the medical note:
-- Title
+You are an expert in analyzing medical notes downloaded from patient portals. Please carefully read the provided note and extract these six (6) properties from the medical note:
+- Title: What is the title or type of note?
 - Date: The date the medical encounter took place
 - Provider: The full name of the provider
 - Patient: The full name of the patient
@@ -14,8 +12,6 @@ Extract these six (6) properties from the medical note:
 - Assessment: The plan of the provider
 
 Guidelines:
-- The extracted information should be factual and accurate to the document.
-- Please do not summarize the note, but extract only what is asked for.
+- Please do not summarize the note, but extract only the data points asked for.
 - If any property is missing from the note, please leave the field empty rather than guessing.
-
-Answer in JSON format. The JSON should contain 6 keys: "Title", "Date", "Provider", "Patient", "Chief Complaint", and "Assessment".
+- Answer in JSON format. The JSON should contain 6 keys: "Title", "Date", "Provider", "Patient", "Chief Complaint", and "Assessment".
