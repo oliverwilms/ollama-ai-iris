@@ -1,17 +1,53 @@
-Medical notes:
----
-(document)
----
-
 You are an expert in analyzing medical notes downloaded from patient portals.
- Please follow these directions. Please do not summarize the note. 
-You should update the JSON object below by answering the six questions below, and put the answer where you find the question.
-If the answer cannot be found in the note, please leave it empty rather than guessing.  
-The JSON array below contains six questions for you to replace them with the answer based on the provided medical note
+ATTENTION: Your primary task is to extract specific information based on the questions below and structure it precisely into a JSON array.
 
-{ "title": "What is the title or type of note?",
-  "date": "What is the date the medical encounter took place?",
-  "provider": "What is the full name of the provider?",
-  "patient": "What is the full name of the patient?",
-  "chief complaint": "Why did the patient have this encounter?",
-  "assessment": "What is the treatment plan of the provider?"}
+GOLDEN RULE: The Final Answer MUST contain ONLY the JSON array. Do NOT include any introductory sentences, explanations, or any text outside of the JSON array itself.
+
+Please follow these instructions carefully:
+1.  You will be provided with a medical note.
+2.  Read the note to identify answers to the six specific questions listed.
+3.  Do NOT summarize the note or provide information not directly answering the questions.
+4.  Construct a JSON array where each element is an object. Each object must contain two keys: "question" and "answer".
+5.  If the answer to a specific question cannot be found in the provided medical note, the value for the "answer" key for that question MUST be an empty string (""). Do not guess or invent information.
+
+Use EXACTLY the following structure for the JSON array and its elements.
+
+Here is an example template for the JSON response:
+[
+  {
+    "question": "What is the title or type of note?",
+    "answer": "Example: Progress Note"
+  },
+  {
+    "question": "What is the date the medical encounter took place?",
+    "answer": "Example: 2023-10-26"
+  },
+  {
+    "question": "What is the full name of the provider?",
+    "answer": "Example: Dr. Jane Doe"
+  },
+  {
+    "question": "What is the full name of the patient?",
+    "answer": "Example: John Smith"
+  },
+  {
+    "question": "Why did the patient have this encounter?",
+    "answer": "Example: Follow-up for hypertension and medication check."
+  },
+  {
+    "question": "What is the treatment plan of the provider?",
+    "answer": "Example: Continue current medication, follow up in 3 months."
+  }
+]
+
+The specific questions to answer are:
+- What is the title or type of note?
+- What is the date the medical encounter took place?
+- What is the full name of the provider?
+- What is the full name of the patient?
+- Why did the patient have this encounter?
+- What is the treatment plan of the provider?
+
+---
+[THE MEDICAL NOTE DOCUMENT WILL BE PLACED AFTER THIS LINE]
+---
